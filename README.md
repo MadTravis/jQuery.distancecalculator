@@ -1,0 +1,2 @@
+# jQuery.distancecalculator
+This plugin makes it easy to calculate distance between 2 or more addresses with the help of Google Maps API. Good thing is, you can also add as many addresses  as You want to calculate the distance of a whole route. The distance values you get are in Miles. You can also change it to get as Kilometers. This plugin acts as a mixin code for Google Map’s Direction Services API so that you don’t have to struggle understanding the API code.
