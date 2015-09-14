@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Distance Calculator</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h2>Journey :</h2>
+	<ol>
+		<li>Navsari, Gujarat, India</li>
+		<li>Surat, Gujarat, India</li>
+		<li>Bharuch, Gujarat, India</li>
+		<li>Mehsana, Gujarat, India</li>
+		<li>Ahmedabad, Gujarat, India</li>
+	</ol>
+	<hr>
+
+	<h2>Get distance in result container</h2>
+	<div id="result"></div>
+	<button type="button" id="calculate">Calculate</button>
+	<hr>
+
+	<h2>Get distance in textbox container</h2>
+	<input type="text" id="result2" value="">
+	<button type="button" id="calculate2">Calculate</button>
+	<hr>
+
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+	<script src="jquery.distancecalculator.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#calculate").click(function(event) {
+			event.preventDefault();
+
+			$("#result").distancecalculator({
+				start_address: "Navsari, Gujarat, India",
+	            end_address: "Ahmedabad, Gujarat, India",
+	            waypoints: ['Surat, Gujarat, India',
+				'Bharuch, Gujarat, India',
+				'Mehsana, Gujarat, India'],
+	            units: "mile",
+	            travel_mode: "DRIVING",
+			})
+		})
+
+		$("#calculate2").click(function(event) {
+			event.preventDefault();
+
+			$("#result2").distancecalculator({
+				result_container_type: "textbox",
+				start_address: "Navsari, Gujarat, India",
+	            end_address: "Ahmedabad, Gujarat, India",
+	            waypoints: ['Surat, Gujarat, India',
+				'Bharuch, Gujarat, India',
+				'Mehsana, Gujarat, India'],
+	            units: "mile",
+	            travel_mode: "DRIVING",
+			})
+		})
+	});
+	</script>
+</body>
+</html>
